@@ -1,0 +1,29 @@
+Около
+Простой бот viber, созданный в python3 и развернутый в контейнере heroku.
+
+использование
+Войдите в Viber Partners и создайте учетную запись Bot. Проверьте токен в информации об аккаунте.
+git@github.com:wannamit/viberbot-chuck.git и cd viberbot-chuck
+Установить Heroku
+Настройка учетной записи Heroku
+Войти Heroku
+Создать новый конвейер (не нужно подключаться к github)
+Создать новое приложение (имя приложения требуется позже)
+Заменить 4 строки в viberChuckBot.py
+MY_BOT_NAME => Название вашей учетной записи бота
+MY_IMAGE_URL => URL вашего изображения аккаунта бота
+MY_APP_TOKEN => Токен аккаунта бота предоставлен в информации аккаунта
+HEROKU_APP_URL => https: // <heroku_app_name> .herokuapp.com
+Вход Heroku в локальный терминал heroku login
+Установить справку Docker
+Вытащите изображение питона, используемое здесь docker pull python:3-alpine3.7
+Heroku Контейнер Логин heroku container:login
+Создай образ докера и нажми на героку heroku container:push web -a <heroku_app_name>(сохрани имя web)
+Освободить запрошенное изображение докера heroku container:release web -a <heroku_app_name>
+Открыть Heroku приложения> Ресурсы> Изменить Dyno Type> Включить webдино
+Шкала webДиноheroku ps:scale web=1 -a <heroku_app_name>
+Откройте приложение (вверху справа на странице приложения Heroku). Должен ответить "бот Viber, который дает шутку Чака Норриса как ответ на каждое сообщение".
+Чтобы проверить логи сервера Heroku heroku logs --tail -a <heroku_app_name>
+Проверьте свою публичную учетную запись Viber Bot в Viber; Теперь должна быть возможность отправить сообщение.
+Отправьте любое сообщение боту, и он ответит случайными фактами Чака Норриса.
+Пример здесь
