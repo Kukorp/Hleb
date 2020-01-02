@@ -75,7 +75,7 @@ def incoming():
 def set_webhook(viber):
     # print("--------------------------------SET WEBHOOK--------------------------------")
     # I used heroku as it is easier and serves over https
-    viber.set_webhook('HEROKU_APP_URL', [EventType.WEBHOOK, EventType.CONVERSATION_STARTED, EventType.DELIVERED, EventType.MESSAGE, EventType.SUBSCRIBED, EventType.UNSUBSCRIBED, EventType.FAILED, EventType.SEEN])
+    viber.set_webhook('https://hlebtest.herokuapp.com', [EventType.WEBHOOK, EventType.CONVERSATION_STARTED, EventType.DELIVERED, EventType.MESSAGE, EventType.SUBSCRIBED, EventType.UNSUBSCRIBED, EventType.FAILED, EventType.SEEN])
 
 @app.route('/chuckjoke', methods=['GET'])
 def retrieve_chuck_joke(url="https://chucknorrisfacts.net/random-fact.php"):
