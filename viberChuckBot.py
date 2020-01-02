@@ -29,9 +29,9 @@ logger.addHandler(handler)
 
 app = Flask(__name__)
 viber = Api(BotConfiguration(
-    name='HlebTest',
+    name='HlebTest1',
     avatar='https://ktonanovenkogo.ru/image/bot-chto-takoe.jpg',
-    auth_token='4ad0ae682627dd0c-9747ccd254522002-ae61be25c7e1ab0f'
+    auth_token='4ad91802a527d1ea-bf8cb3dd92bcb46a-13324302900e67bf'
 ))
 
 
